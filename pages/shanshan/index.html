@@ -28,19 +28,19 @@
 				z-index: 100;
 				position: fixed;
 				display: inline-block;
-				margin: 0 0 0 -100px;
+				margin: 0 0 0 -5rem;
 				border-radius: 50%;
-				width: 200px;
-				height: 200px;
+				width: 10rem;
+				height:10rem;
 				border: 7px solid #FFFFFF;
 				box-shadow: 0px 0px 20px 2px #fff59d;
 			}
 			
 			#logo:hover {	 
 				z-index: 100;
-				margin: 0 0 0 -130px;
-				width: 260px;
-				height: 260px;
+				margin: 0 0 0 -6rem;
+				width: 12rem;
+				height:12rem;
 				box-shadow: 0px 0px 1px #9D9D9D;
 			}
 		</style>
@@ -57,6 +57,7 @@
 			<div class="shape">新婚快乐</div>
 			<div class="shape">百年好合</div>
 			<div class="shape">夫妻同心</div>
+			
 		</div>
 		<audio src="../../res/boom.mp3" preload="auto"></audio>
 		<audio src="../../res/boom.mp3" preload="auto"></audio>
@@ -146,12 +147,10 @@
 				var moon = document.getElementById("moon");
 
 				var centerX = canvas.width / 2 - 100,
-					centerY = 100,
+					centerY = 400,
 					width = 200;
 				if(moon.complete) {
-					moon.width = "50px";
 					ctx.drawImage(moon, centerX, centerY, width, width);
-					
 				} else {
 					moon.onload = function() {
 						ctx.drawImage(moon, centerX, centerY, width, width);
