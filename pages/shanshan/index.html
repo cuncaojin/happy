@@ -53,7 +53,7 @@
 		<img src="" alt="" id="moon" style="width: 0px;height: 0px;" />
 		<img src="../../img/shanshanhuangshuai.jpg" alt="" id="logo" />
 		<div style="display:none">
-			<div class="shape">姗姗 ❤ 黄帅</div>
+			<div class="shape">黄帅❤姗姗 </div>
 			<div class="shape">新婚快乐</div>
 			<div class="shape">百年好合</div>
 			<div class="shape">夫妻同心</div>
@@ -98,8 +98,8 @@
 				ctx.restore();
 
 				var newTime = new Date();
-				if(newTime - lastTime > 200 + (window.innerHeight - 767) / 2) {
-					var random = Math.random() * 100 > 2 ? true : false;
+				if(newTime - lastTime > 300 + (window.innerHeight - 767) / 2) {
+					var random = Math.random() * 100 > 5 ? true : false;
 					var x = getRandom(canvas.width / 5, canvas.width * 4 / 5);
 					var y = getRandom(50, 200);
 					if(random) {
@@ -177,7 +177,7 @@
 			}
 
 			var raf = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
-				window.setTimeout(callback, 1000 / 60);
+				window.setTimeout(callback, 50000 / 60);
 			};
 
 			canvas.onclick = function() {
@@ -262,7 +262,7 @@
 							break;
 						}
 					}
-					for(var i = 0; i < fragNum; i++) {
+					for(var i = 0; i < (fragNum>100?100:fragNum); i++) {
 						if(style === 2) {
 							color = {
 								a: parseInt(getRandom(128, 255)),
@@ -312,7 +312,7 @@
 				} else {
 					var text = ele.innerHTML;
 					context.save();
-					var fontSize = 100;
+					var fontSize = 120;
 					context.font = fontSize + "px 宋体 bold";
 					context.textAlign = "center";
 					context.textBaseline = "middle";
